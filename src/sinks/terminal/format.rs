@@ -150,7 +150,7 @@ impl LogLine {
                     policy, asset_ascii.as_deref().unwrap_or(asset), amount
                 ),
             ),
-            EventData::Metadata(MetadataRecord { label, content }) => LogLine::new_raw(
+            EventData::Metadata(MetadataRecord { label, content, .. }) => LogLine::new_raw(
                 source,
                 "META",
                 Color::Yellow,

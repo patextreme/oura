@@ -58,6 +58,9 @@ pub struct MetadataRecord {
 
     #[serde(flatten)]
     pub content: MetadatumRendition,
+
+    // required for custom cbor parsing
+    pub metadatum: pallas_primitives::alonzo::Metadatum,
 }
 
 impl From<MetadataRecord> for EventData {

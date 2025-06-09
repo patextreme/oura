@@ -154,6 +154,7 @@ impl EventWriter {
                 }
                 Metadatum::Map(_) => MetadatumRendition::MapJson(self.to_metadatum_json(value)?),
             },
+            metadatum: value.clone(),
         };
 
         Ok(data)
